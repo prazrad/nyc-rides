@@ -5,7 +5,7 @@ following aspects:
 2. Number of rides to and from the three airports of NYC (JFK, Newark,
 LaGuard)
 
-This is an simulated experiement to find the analytics result and should not be part of actual real world analytics senario. Here, I have used July(07) and August(07) data for the analytical operation due to infrastructure environment.
+This is an simulated experiement to find the analytics result and should not be part of actual real world analytics senario. Here, I have used July(07) and August(08) - 2019 data for the analytical operation due to infrastructure environment.
 
 Over all flow of the POC (High-level architecture):
 
