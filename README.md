@@ -15,13 +15,13 @@ After cloning this repo performing the following :
 
 ##### Note : Update the CSV file directory in the code level
 
-### Start Spark Streaming Jobs
+### Start Spark Jobs
 
-To get the result of 1st report - All ride information run "airport_rides_report.py" using :
-```./spark-submit airport_rides_report.py <optional-spark-parameters-if-any>```
+To get the result of 1st report - All ride information run "all_rides_report.py" using :
+```./spark-submit all_rides_report.py```
 
 To get the result of 2nd report - All airport ride information run "airport_rides_report.py" using :
-```./spark-submit all_rides_report.py <optional-spark-parameters-if-any>```
+```./spark-submit airport_rides_report.py```
 
 This will generate partitioned "Parquet files" under ./output directory
 
