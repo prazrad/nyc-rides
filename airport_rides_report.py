@@ -12,14 +12,14 @@ if __name__ == "__main__":
     ###Data Injection
 
     #TLC Taxi Zone LocationID - Lookup DSV file for Airport
-    tlc_lookup = spark.read.csv("/home/serendio/Documents/Prasaanth/Gerald/data/taxi+_zone_lookup.csv",header=True)
+    tlc_lookup = spark.read.csv("/<your-path>/Gerald/data/taxi+_zone_lookup.csv",header=True)
 
     #Airport names in New york as per the problem statment
     filter_zone = ["Newark Airport","JFK Airport","LaGuardia Airport"]
     filtered_airports = tlc_lookup.filter(F.col("Zone").isin(filter_zone)).select("LocationID")
 
     #Yello Cabs
-    yc_all = spark.read.csv("/home/serendio/Documents/Prasaanth/Gerald/data/yellow_cab/*.csv",
+    yc_all = spark.read.csv("/<your-path>/Prasaanth/Gerald/data/yellow_cab/*.csv",
              header=True,
              inferSchema=True).select("PULocationID","DOLocationID","tpep_pickup_datetime")
 
@@ -39,7 +39,7 @@ if __name__ == "__main__":
 
 
     #FHV
-    fhv_all = spark.read.csv("/home/serendio/Documents/Prasaanth/Gerald/data/fhv/*.csv",
+    fhv_all = spark.read.csv("/<your-path>/Prasaanth/Gerald/data/fhv/*.csv",
              header=True,
              inferSchema=True).select("PULocationID","DOLocationID","pickup_datetime")
 

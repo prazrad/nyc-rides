@@ -11,7 +11,7 @@ if __name__ == "__main__":
 
     ##Data Injection
     #Yello Cabs
-    yc_all = spark.read.csv("/home/serendio/Documents/Prasaanth/Gerald/data/yellow_cab/*.csv",
+    yc_all = spark.read.csv("/<your-path>/Prasaanth/Gerald/data/yellow_cab/*.csv",
              header=True,
              inferSchema=True).select("PULocationID","DOLocationID","tpep_pickup_datetime","tpep_dropoff_datetime","Trip_distance")
 
@@ -31,7 +31,7 @@ if __name__ == "__main__":
 
 
     #For Hire Vehicle
-    fhv_all = spark.read.csv("/home/serendio/Documents/Prasaanth/Gerald/data/fhv/*.csv",
+    fhv_all = spark.read.csv("/<your-path>/Prasaanth/Gerald/data/fhv/*.csv",
              header=True,
              inferSchema=True).select("PULocationID","DOLocationID","pickup_datetime","dropoff_datetime")
 
